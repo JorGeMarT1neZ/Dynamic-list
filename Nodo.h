@@ -3,6 +3,10 @@
 
 #include "producto.h"
 
+using std::cout ; 
+using std::endl ;
+using std::cin ;
+
 class Nodo
 {
 	private: 
@@ -11,8 +15,10 @@ class Nodo
 	public:
 		Nodo();
 		Nodo(producto); 
+		Nodo * getnextptr(); 
 		void setdatoproducto(producto); 
 		producto getdatoproducto(); 
+		void datosnodo(); 
 	protected:
 };
 
