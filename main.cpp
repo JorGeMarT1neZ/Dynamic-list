@@ -1,7 +1,10 @@
 #include <iostream>
 
+#include "producto.h"
 
+producto p = producto();
 
 int main(int argc, char** argv) {
-	return 0;
+	
+	cout << &p << endl ; 
 }
