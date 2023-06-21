@@ -14,7 +14,8 @@ class Nodo
 	    Nodo *nextptr; 
 	public:
 		Nodo();
-		Nodo(producto); 
+		Nodo(producto);
+		void setnextptr(Nodo*); 
 		Nodo * getnextptr(); 
 		void setdatoproducto(producto); 
 		producto getdatoproducto(); 

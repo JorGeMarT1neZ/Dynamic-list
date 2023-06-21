@@ -39,8 +39,14 @@ void Lista::insetOne(){
 	
 	if(this->firstnode == NULL){
 		cout << "primer elemento insertado " << endl ; 
-		this->firstnode = node; 
+		this->firstnode = node;
+		this->lastnode = node;  
+	}else{
+
+		this->lastnode->setnextptr(node); 
+		this->lastnode = node;
 	}
+	
 	 
 } 
 void Lista::InsetMany(){
@@ -48,5 +54,17 @@ void Lista::InsetMany(){
 } 
 		
 void Lista::showlist(){
-
+	
+	if(!this->getfirstnode()){
+		cout << "\n\tLa Lista esta vacia " <<endl<<endl ;
+	}else{
+		
+		Nodo * Aux = this->getfirstnode();
+		while(Aux){
+			Aux->datosnodo();
+		    Aux = Aux->getnextptr();	
+		}
+	}
 }
+
+

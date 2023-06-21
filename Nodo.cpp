@@ -8,6 +8,11 @@ Nodo::Nodo(producto p)
 :datoproducto(p),nextptr(NULL)
 {}
 
+void Nodo::setnextptr(Nodo* n){
+
+	this->nextptr = n ; 
+}
+
 Nodo * Nodo::getnextptr(){
 	return this->nextptr; 
 }
