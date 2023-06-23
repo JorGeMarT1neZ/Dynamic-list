@@ -2,6 +2,7 @@
 #define PRODUCTO_H
 
 #include <iostream>
+#include <random>
 
 using std::string; 
 
@@ -25,5 +26,7 @@ class producto
 		int getprecio();    
 	protected:
 };
+
+
 
 #endif

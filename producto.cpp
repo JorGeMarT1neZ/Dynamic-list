@@ -1,16 +1,22 @@
 #include "producto.h"
 
 producto::producto()
-:_id("-"),nombre("-"),marca("-"),precio(0)
-{}
-producto::producto(string id ,string nom ,string mar,int pre)
-:_id(id),nombre(nom),marca(mar),precio(0)
-
-{}
+{
+	this->_id = "null"; 
+	this->nombre = "null"; 
+	this->marca = "null"; 
+	this->precio = 0 ; 
+}
+producto::producto(string id , string nom ,string mar,int pre)
+{
+	this->_id = id ; 
+	this->nombre = nom; 
+	this->marca = mar; 
+	this->precio = pre ; 
+}
 void producto::set_id(string id){
 	this->_id = id ; 
 }
- 
 string producto::get_id(){
 	return this->_id; 
 }
@@ -32,3 +38,4 @@ void producto::setprecio(int pre){
 int producto::getprecio(){
 	return this->precio;  	
 }
+

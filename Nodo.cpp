@@ -26,7 +26,10 @@ producto Nodo::getdatoproducto(){
 
 void Nodo::datosnodo(){
 	cout <<"-------------------------------------"<<endl ;
-	cout << "\t " << getdatoproducto().getnombre() <<" "<< getdatoproducto().getmarca() <<" "<< getdatoproducto().getprecio() << endl ; 
+	cout <<"primary_key == " << getdatoproducto().get_id() <<endl; 
+	cout << "\t " << getdatoproducto().getnombre() <<" "<<
+	getdatoproducto().getmarca()  <<" $"<< 
+	getdatoproducto().getprecio() << endl ; 
 	cout << "La direccion de este nodo es: " << this << endl ; 
 	cout << "Este Nodo le apunta a : " << getnextptr() << endl ;
 	cout <<"-------------------------------------"<<endl<<endl;	

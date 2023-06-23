@@ -2,8 +2,12 @@
 #define LISTA_H
 
 #include "Nodo.h"
+#include <fstream>
 
-
+using std::ifstream ; 
+using std::ofstream ;
+using std::random_device; 
+using std::to_string; 
 
 class Lista
 {
@@ -18,12 +22,11 @@ class Lista
 		void setlastnode(Nodo *);
 		Nodo * getlastnode();  
 		
-		void insetOne(); 
-		void InsetMany(); 
+		void insertOne(); 
+		void insertMany(); 
+		void insert(producto);
 		
-		void showlist(); 
-		
-	protected:
+		void showlist(); 	
 };
 
 #endif

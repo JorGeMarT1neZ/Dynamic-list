@@ -1,0 +1,12 @@
+chocolate corona 1500
+cafe juanValdez 40000
+cafe Tostao 12000
+cafe Oma 13000
+cafe Quindio 45000
+quesoPrmesano alpina 62000 
+quesoMozzarella alpina 78000
+quesoBrie alpina 89000
+quesoCheddar alpina 56000
+quesoManchego alpina 33000
+quesoCamembert alpina 45000
+quesoGouda alpina 30000

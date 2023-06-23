@@ -17,10 +17,8 @@ Nodo * Lista::getlastnode(){
 	return this->lastnode; 
 } 
 		
-void Lista::insetOne(){
-	
+void Lista::insertOne(){
 	producto p = producto();  
-
 	cout <<"ingresa nombre -> "; 
 	string nombre ; 
 	cin >>nombre ; 
@@ -45,20 +43,36 @@ void Lista::insetOne(){
 
 		this->lastnode->setnextptr(node); 
 		this->lastnode = node;
-	}
-	
-	 
+	}	 
 } 
-void Lista::InsetMany(){
 
+void Lista::insertMany(){
+	string dato1,dato2; 
+	int dato3; 
+	ifstream entrada("datosProductos.txt"); 
+	random_device rd;
+	while(!entrada.eof() && entrada>>dato1>>dato2>>dato3){
+		producto P(to_string(rd()),dato1,dato2,dato3);
+		insert(P); 
+	}	
 } 
-		
+
+void Lista::insert(producto p){
+	
+	Nodo *node = new Nodo(p) ;
+	if(this->firstnode == NULL && this->lastnode == NULL){
+		this->firstnode = node;
+		this->lastnode = node;  
+	}else{
+		this->lastnode->setnextptr(node); 
+		this->lastnode = node;
+	}	
+}	
 void Lista::showlist(){
 	
 	if(!this->getfirstnode()){
 		cout << "\n\tLa Lista esta vacia " <<endl<<endl ;
 	}else{
-		
 		Nodo * Aux = this->getfirstnode();
 		while(Aux){
 			Aux->datosnodo();
